@@ -39,7 +39,7 @@ object Imperative {
 object Configs {
   type Configured[T] = Config ?=> T
 
-  def config: Configured[Config] = implicitly[Config]
+  def config: Configured[Config] = summon[Config]
 }
 
 object Exceptions {
